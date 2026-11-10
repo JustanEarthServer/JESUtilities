@@ -1,7 +1,7 @@
 name: JESUtilities
 version: '${version}'
 
-main: dev.ciel.jESUtilities.JESUtilities
+main: dev.ciel.jesutilities.JESUtilities
 api-version: '26.2'
 load: POSTWORLD
 
@@ -9,3 +9,6 @@ permissions:
   jesutilities.autoboat:
     description: Allows using /autoboat
     default: true
+  jesutilities.reload:
+    description: Allows reloading the config with /autoboat reload
+    default: op

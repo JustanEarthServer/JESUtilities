@@ -1,36 +1,23 @@
 # JESUtilities
 
-Small quality-of-life features for jes.earth.
+Utility plugin for jes.earth.
 
 ## Autoboat
 
-Hold the forward key while steering a boat for 5 seconds and autoboat turns on: the boat keeps rowing forward at normal top speed by itself, so you can travel long distances without holding the key. You can still steer left and right.
+If you hold W in a boat for 5 seconds, autoboat turns on and the boat keeps going forward by itself. You can still steer with A/D.
 
-Autoboat only turns on if the boat actually moved during those 5 seconds, so rowing against a wall or on land won't trigger it.
+It turns off if you press S, type `/autoboat off`, get out of the boat, or the boat stops moving (hits land etc). It also won't turn on if you're rowing into a wall.
 
-Autoboat turns off when:
+Commands:
+- `/autoboat [on|off]`
+- `/autoboat reload` - reloads the config
 
-- you press the back key (S)
-- you type `/autoboat off`
-- the boat stops making progress (hit the shore, stuck on something)
-- you leave the boat
+Permissions:
+- `jesutilities.autoboat` - everyone by default
+- `jesutilities.reload` - op by default
 
-### Commands
-
-| Command | Description |
-| --- | --- |
-| `/autoboat` | Toggle autoboat for the boat you are steering |
-| `/autoboat on` | Turn autoboat on |
-| `/autoboat off` | Turn autoboat off |
-
-Permission: `jesutilities.autoboat` (default: everyone)
+Messages and timings can be changed in `config.yml`.
 
 ## Building
 
-```
-./gradlew build
-```
-
-The jar is written to `build/libs/`.
-
-Requires Paper 26.2 and Java 25.
+`./gradlew build`, jar ends up in `build/libs/`. Needs Paper 26.2 / Java 25.

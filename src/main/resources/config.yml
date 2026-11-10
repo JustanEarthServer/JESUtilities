@@ -1,0 +1,28 @@
+# Messages use MiniMessage format. Set a message to "" to disable it.
+# /autoboat reload to apply changes
+
+autoboat:
+  # seconds of holding forward before autoboat turns on
+  activation-seconds: 5
+  # blocks the boat has to move in that time (so rowing into a wall doesn't count)
+  activation-min-distance: 8.0
+  # autoboat turns off if the boat moves less than stuck-min-distance blocks in stuck-check-seconds
+  stuck-check-seconds: 2
+  stuck-min-distance: 2.0
+  # blocks per tick, 0.4 is normal boat top speed
+  speed: 0.4
+
+messages:
+  enabled: "<green>Autoboat is now on. To disable, type /autoboat off"
+  disabled: "<yellow>Autoboat is now off. <gray>(<reason>)"
+  disabled-by-command: "<yellow>Autoboat is now off."
+  reason-pressed-back: "you pressed back"
+  reason-stopped-moving: "your boat stopped moving"
+  reason-left-boat: "you left the boat"
+  reason-switched-boat: "you switched boats"
+  already-on: "<yellow>Autoboat is already on."
+  not-on: "<yellow>Autoboat is not on."
+  not-in-boat: "<red>You need to be steering a boat to use autoboat."
+  players-only: "<red>Only players can use this command."
+  usage: "<red>Usage: /autoboat [on|off]"
+  reloaded: "<green>Config reloaded."
